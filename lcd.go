@@ -1,16 +1,47 @@
 package lcd
 
 func Lcd(number string) string {
-	mapNumber := map[string]string{
-		"1": "|\n|",
-		"2": " _\n _|\n|_",
-		"4": "\n|_|\n  |",
-		"7": "_\n |\n |",
-		"0": " _\n| |\n|_|",
+	high := map[string]string{
+		"1": "",
+		"2": " _ ",
+		"3": " _ ",
+		"4": "   ",
+		"5": " _ ",
+		"6": " _ ",
+		"7": "_ ",
+		"8": " _ ",
+		"9": " _ ",
+		"0": " _ ",
 	}
-	var lcdNumber string
+	middle := map[string]string{
+		"1": "|",
+		"2": " _|",
+		"3": " |",
+		"4": "|_|",
+		"5": "|_",
+		"6": "|_",
+		"7": " |",
+		"8": "|_|",
+		"9": "|_|",
+		"0": "| |",
+	}
+	low := map[string]string{
+		"1": "|",
+		"2": "|_",
+		"3": "_|",
+		"4": "  |",
+		"5": " _|",
+		"6": "|_|",
+		"7": " |",
+		"8": "|_|",
+		"9": " _|",
+		"0": "|_|",
+	}
+	var lcdHigh, lcdMiddle, lcdLow string
 	for _, digit := range number {
-		lcdNumber += mapNumber[string(digit)]
+		lcdHigh += high[string(digit)]
+		lcdMiddle += middle[string(digit)]
+		lcdLow += low[string(digit)]
 	}
-	return lcdNumber
+	return lcdHigh + "\n" + lcdMiddle + "\n" + lcdLow
 }
