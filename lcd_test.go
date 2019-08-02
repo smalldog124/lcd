@@ -7,7 +7,8 @@ import (
 )
 
 func Test_Lcd_Input_1_Should_Be_one(t *testing.T) {
-	expected := `|
+	expected := `
+|
 |`
 
 	actual := Lcd("1")
@@ -17,7 +18,7 @@ func Test_Lcd_Input_1_Should_Be_one(t *testing.T) {
 }
 
 func Test_Lcd_Input_2_Should_Be_Tow(t *testing.T) {
-	expected := ` _
+	expected := ` _ 
  _|
 |_`
 
@@ -27,7 +28,7 @@ func Test_Lcd_Input_2_Should_Be_Tow(t *testing.T) {
 }
 
 func Test_Lcd_Input_74_Should_Be_SeventFourZero(t *testing.T) {
-	expected := `_   
+	expected := `_    
  ||_|
  |  |`
 
