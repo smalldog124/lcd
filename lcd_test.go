@@ -27,11 +27,20 @@ func Test_Lcd_Input_2_Should_Be_Tow(t *testing.T) {
 	assert.Equal(t, expected, actual)
 }
 
-func Test_Lcd_Input_74_Should_Be_SeventFourZero(t *testing.T) {
+func Test_Lcd_Input_74_Should_Be_SeventFour(t *testing.T) {
 	expected := `_    
  ||_|
  |  |`
 
 	actual := Lcd("74")
+	assert.Equal(t, expected, actual)
+}
+
+func Test_Lcd_Input_74_Should_Be_SeventFourZero(t *testing.T) {
+	expected := `_     _ 
+ ||_|| |
+ |  ||_|`
+
+	actual := Lcd("740")
 	assert.Equal(t, expected, actual)
 }
